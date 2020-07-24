@@ -99,8 +99,7 @@ fn get_opensky_states() -> Vec<OpenskyState> {
         Err(e) => panic!("Error calling Opensky API: {}", e),
         Ok(resp) => {
             let data = resp.bytes().expect("Error reading from Opensky API.");
-            let states = parse_opensky_response(data).states;
-            states
+            parse_opensky_response(data).states
         }
     }
 }
