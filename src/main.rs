@@ -158,7 +158,7 @@ mod tests {
             lon: -118.4,
         };
 
-        assert!((haversine(origin, destination) - 2887.2599506071106).powi(2) < 0.00001);
+        assert!((haversine(&origin, destination) - 2887.2599506071106).powi(2) < 0.00001);
     }
 
     #[test]
